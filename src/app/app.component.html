@@ -1,20 +1,185 @@
 <!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
+<!--<div style="text-align:center">
   <h1>
     Welcome to {{title}}!!
   </h1>
+  <router-outlet></router-outlet>
   <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/docs/ts/latest/tutorial/">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
+-->
 
+<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="/">SinuheGuerra<span>.com</span></a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="#">Home</a></li>
+          <li><a href="#">Projects (coming soon!)</a></li>
+					<!--<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>-->
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+		<!--
+			To use a video as your background, set data-video to the name of your video without
+			its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+			formats to work correctly.
+		-->
+			<section id="banner" data-video="images/banner">
+				<div class="inner">
+          <img src="images/profile.jpg" class="img-responsive img-circle img-centered img-profile-photo">
+					<h1>{{profile.candidate.Name}}</h1>
+					<p>{{profile.Title}}
+          </p>
+					<a href="#one" class="button special scrolly">Learn more</a>
+				</div>
+        <video autoplay loop><source src="images/banner.mp4" type="video/mp4" /><source src="images/banner.webm" type="video/webm" /></video>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div>
+						<div class="box">
+							<div class="image fit">
+								<img src="images/profile1.png" alt="" />
+							</div>
+							<div class="content">
+								<header class="align-center">
+									<h2>Summary</h2>
+									<!--<p>{{profile.Description}}</p>-->
+								</header>
+                <div>
+								<hr />
+                <p>{{profile.Description}}</p>
+                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style3">
+				<div class="inner">
+					<div id="flexgrid">
+						<div>
+							<header>
+								<h3>LinkedIn</h3>
+							</header>
+							<p>See more details in the LinkedIn profile.</p>
+							<ul class="actions">
+								<li><a [attr.href]="profile.LinkedInUrl" class="button alt">Learn More</a></li>
+							</ul>
+						</div>
+						<div>
+							<header>
+								<h3>GitHub</h3>
+							</header>
+							<p>See the repository of this page.</p>
+							<ul class="actions">
+								<li><a [attr.href]="profile.GitHubUrl" class="button alt">Learn More</a></li>
+							</ul>
+						</div>
+						<div>
+							<header>
+								<h3>Facebook</h3>
+							</header>
+							<p>More personal stuff.</p>
+							<ul class="actions">
+								<li><a [attr.href]="profile.FacebookUrl" class="button alt">Learn More</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper style2">
+				<div class="inner">
+					<div class="grid-style">
+
+            <div *ngFor="let comment of comments">
+							<div class="box">
+								<div class="image fit" style="max-height: 230px; overflow-y: hidden;">
+									<img *ngIf="comment.CommentPhoto" [src]="comment.CommentPhoto" alt="" />
+                  <img *ngIf="!comment.CommentPhoto" src="images/pic0{{(comment.CommentId % 2) + 2}}.jpg" alt="" />
+								</div>
+								<div class="content" style="padding-top: 0.5rem;">
+                  <p>{{comment.CommentText}}</p>
+                  <hr />
+									<header class="align-center">
+										<h3>{{ comment.Name }}</h3>
+										<p>{{comment.PostedOn | date: 'MMMM d, y'}}</p>
+									</header>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		<!-- Four -->
+			<!--<section id="four" class="wrapper style3">
+				<div class="inner">
+
+					<header class="align-center">
+						<h2>Morbi interdum mollis sapien</h2>
+						<p>Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
+					</header>
+
+				</div>
+			</section>-->
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper">
+				<div class="inner">
+					<!--<section>
+						<div class="box">
+							<div class="content">
+								<h2 class="align-center">Get in Touch</h2>
+								<hr />
+								<form action="#" method="post">
+									<div class="field half first">
+										<label for="name">Name</label>
+										<input name="name" id="name" type="text" placeholder="Name">
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input name="email" id="email" type="email" placeholder="Email">
+									</div>
+									<div class="field">
+										<label for="dept">Department</label>
+										<div class="select-wrapper">
+											<select name="dept" id="dept">
+												<option value="">- Category -</option>
+												<option value="1">Manufacturing</option>
+												<option value="1">Shipping</option>
+												<option value="1">Administration</option>
+												<option value="1">Human Resources</option>
+											</select>
+										</div>
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+									</div>
+									<ul class="actions align-center">
+										<li><input value="Send Message" class="button special" type="submit"></li>
+									</ul>
+								</form>
+							</div>
+						</div>
+					</section>-->
+					<div class="copyright">
+						&copy; Design: <a href="https://templated.co/">TEMPLATED</a>. Images <a href="https://unsplash.com/">Unsplash</a>. Video <a href="http://coverr.co/">Coverr</a>.
+					</div>
+				</div>
+			</footer>

@@ -1,0 +1,23 @@
+
+<div class="container">
+  <img class="img-responsive img-centered" [src]="profile.candidate.Photo">
+  <p>
+    {{profile.Title}}
+  </p>
+  <p>
+    {{profile.Description}}
+  </p>
+  <a [attr.href]="profile.LinkedInUrl" class="card-link">LinkedIn</a>
+  <a [attr.href]="profile.TwitterUrl" class="card-link">Twitter</a>
+  <a [attr.href]="profile.GitHubUrl" class="card-link">GitHub</a>
+  <a [attr.href]="profile.FacebookUrl" class="card-link">Facebook</a>
+  <a [attr.href]="profile.GooglePlusUrl" class="card-link">GooglePlus</a>
+  <div class="row" *ngFor="let comment of comments">
+    <div class="card card-block">
+      <img class="img-responsive img-centered" *ngIf="comment.CommentPhoto" [src]="comment.CommentPhoto">
+      <h4 class="card-title">{{ comment.Name }}</h4>
+      <p class="card-text">{{comment.CommentText}} - {{comment.PostedOn | date: 'MMMM d, y'}}</p>
+      
+    </div>
+  </div>
+</div>
