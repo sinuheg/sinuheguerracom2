@@ -7,6 +7,12 @@ var Comment = require('../models/comment');
 var Candidate = require('../models/candidate');
 
 
+
+
+// declare axios for making http requests
+const axios = require('axios');
+const API = 'https://jsonplaceholder.typicode.com';
+
 /* GET api listing. */
 router.get('/', (req, res) => {
   res.send('api works');
@@ -78,6 +84,34 @@ router.get('/profile', (req, res) => {
       
 
       //res.status(200).json(data);
+    });
+});
+
+router.get('/save_posts', (req, res) => {
+  // Get posts from the mock api
+  // This should ideally be replaced with a service that connects to MongoDB
+  axios.get(`${API}/posts`)
+    .then(posts => {
+      
+      for (var i = 0; i < posts.data.length; i++) {
+        var post = new Post({
+          id: posts.data[i].id,
+          title: posts.data[i].title,
+          userId: posts.data[i].userId,
+          body: posts.data[i].body
+        });
+
+        post.save(function (err) {
+          if (err) throw err;
+          console.log('post '+ post.id +' saved successfully!');
+        });
+      }
+      
+
+      res.status(200).send('all posts saved');
+    })
+    .catch(error => {
+      res.status(500).send(error)
     });
 });
 
