@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://sinuhe:sinuhe@ec2-34-203-188-157.compute-1.amazonaws.com/sinuheguerracom');
+mongoose.connect('mongodb://sinuhe:sinuhe@ec2-34-227-26-38.compute-1.amazonaws.com/sinuheguerracom');
 var Schema = mongoose.Schema;
 
 var postSchema = new Schema({

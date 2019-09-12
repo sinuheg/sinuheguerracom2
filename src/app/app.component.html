@@ -33,7 +33,7 @@
 			<section id="banner" data-video="images/banner">
 				<div class="inner">
           <img src="images/profile.jpg" class="img-responsive img-circle img-centered img-profile-photo">
-					<h1>{{profile.candidate.Name}}</h1>
+					<h1>{{profile.candidate ? profile.candidate.Name: ""}}</h1>
 					<p>{{profile.Title}}
           </p>
 					<a href="#one" class="button special scrolly">Learn more</a>
